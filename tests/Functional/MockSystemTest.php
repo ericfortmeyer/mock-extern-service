@@ -19,7 +19,7 @@ class MockSystemTest extends PHPUnit_Framework_TestCase
 
     public function testIsWorkMailSystem()
     {
-        $mailto = $_ENV['USER'] . "@127.0.0.1";
+        $mailto = "root@127.0.0.1";
         $msg = "Nachricht " . time();
         mail($mailto, "subject", $msg);
         $this->assertContains($msg, MockExternService\Result::MailInbox());
