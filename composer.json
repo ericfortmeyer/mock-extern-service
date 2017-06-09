@@ -1,5 +1,5 @@
 {
-    "name": "tmatthaiou/mock-extern-service",
+    "name": "tumtum/mock-extern-service",
     "description": "To mock service like mail or UDP socket for functional Tests. TDD, PHPUnit",
     "type": "libary",
     "authors": [
