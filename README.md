@@ -56,6 +56,11 @@ Socket will be listen on:
         $this->assertEquals($data, MockExternService\Result::UdpSockArrived());
     }
     
+Sample:
+-------
+
+See [PHPUnitTest](tests/Functional/MockSystemTest.php) File
+
 Chanelog
 --------
 
