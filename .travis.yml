@@ -11,9 +11,8 @@ php:
   - 7.0
 
 before_script:
-  - curl -s https://getcomposer.org/installer | php
-  - php composer.phar config -g github-oauth.github.com "${GITHUB_TOKEN}"
-  - php composer.phar install --prefer-source
+  - composer config -g github-oauth.github.com "${GITHUB_TOKEN}"
+  - composer install
 
 script:
   - php -d sendmail_path=mock-service/smtp-mock-server.php vendor/bin/phpunit --stop-on-error --stop-on-failure
