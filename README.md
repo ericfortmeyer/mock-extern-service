@@ -8,7 +8,8 @@ The result will be saved in a file and that can you assert.
 
 Installation
 ------------
-composer require --dev "tmatthaiou/mock-extern-service"
+
+_composer require --dev "tumtum/mock-extern-service"_
 
 Booting
 -------
