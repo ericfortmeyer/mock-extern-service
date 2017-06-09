@@ -1,6 +1,8 @@
 Mock Extrern Service
 ====================
 
+[![Build Status](https://travis-ci.org/tmloberon/mock-extern-service.svg?branch=master)](https://travis-ci.org/tmloberon/oxrun)
+
 To mock service like mail or UDP socket for functional Tests.
 The result will be saved in a file and that can you assert.
 
