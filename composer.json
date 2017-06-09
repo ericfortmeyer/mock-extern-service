@@ -1,7 +1,8 @@
 {
     "name": "tumtum/mock-extern-service",
     "description": "To mock service like mail or UDP socket for functional Tests. TDD, PHPUnit",
-    "type": "libary",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Tobias Matthaiou",
