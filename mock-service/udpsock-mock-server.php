@@ -21,10 +21,9 @@ set_time_limit (0);
 ob_implicit_flush ();
 
 // Find autoloader
-foreach (array(__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/../autoload.php') as $file) {
+foreach (array(__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php') as $file) {
     if (file_exists($file)) {
         require $file;
-        $loaded = true;
         break;
     }
 }
@@ -32,10 +31,6 @@ foreach (array(__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.p
 $data_received = \tm\MockExternService\FilePath::udpsock_received();
 $data_log      = \tm\MockExternService\FilePath::udpsock_log();
 $data_pid      = \tm\MockExternService\FilePath::udpsock_pid();
-
-if (is_dir($data) == false) {
-    mkdir($data, 0775);
-}
 
 function wlog($log) {
     global $data_log;
