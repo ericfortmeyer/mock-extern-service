@@ -62,7 +62,7 @@ Socket will be listen on:
 Sample:
 -------
 
-See [PHPUnitTest](tests/Functional/MockSystemTest.php) File
+See [PHPUnitTest](tests/) command: `php -d sendmail_path=mock-service/smtp-mock-server.php ./vendor/bin/phpunit`. 
 
 Chanelog
 --------
