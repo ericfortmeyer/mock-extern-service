@@ -26,7 +26,9 @@ Assert
 
 #### Mock Mails System
 
-with `tm\MockExternService\Result::MailInbox()` get you the mail Content
+with `tm\MockExternService\Result::MailInbox()` get you the mail Content.
+
+The PHP ini "sendmail_path" must be set to [smtp-mock-server.php](mock-service/smtp-mock-server.php) script. That get the Mail and save it. This config can only set befor starts the script. Like in php.ini or as command option (php -d)
 
 ###### Sample:
 
