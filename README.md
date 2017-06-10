@@ -1,5 +1,5 @@
-Mock Extrern Service
-====================
+Mock Extern Service
+===================
 
 [![Build Status](https://travis-ci.org/tmloberon/mock-extern-service.svg?branch=master)](https://travis-ci.org/tmloberon/mock-extern-service)
 
