@@ -30,6 +30,8 @@ class Service
         sleep(1);
 
         register_shutdown_function('Fortmeyer\MockExternService\Service::killUdpsockServer');
+        register_shutdown_function('Fortmeyer\MockExternService\Service::cleanUp');
+
     }
 
     /**
@@ -55,8 +57,10 @@ class Service
     public static function killUdpsockServer() {
         $pid = FilePath::udpsock_pid();
 
+
         if (file_exists($pid)) {
             exec('kill ' . escapeshellarg(file_get_contents($pid)));
+            unlink(FilePath::udpsock_pid());
         }
     }
 }
