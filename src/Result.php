@@ -15,7 +15,7 @@ namespace tm\MockExternService;
 class Result
 {
     /**
-     * Holt die Mail von der Inbox ab
+     * Collects the mail from the inbox
      *
      * @return bool|string
      */
@@ -30,13 +30,13 @@ class Result
     }
 
     /**
-     * Das was Graylog emfangen wurden
+     * Graylog entry
      *
      * @return string
      */
     public static function UdpSockArrived() {
         $inbox = FilePath::udpsock_received();
-        sleep(1); # bischen warten bis die Sachen auf der Platte gespeichert wurden
+        sleep(1); # wait until data is received
 
         if (file_exists($inbox)) {
             return (string)file_get_contents($inbox);

@@ -16,7 +16,7 @@ namespace tm\MockExternService;
 class Service
 {
     /**
-     * Start einige Services
+     * Start some services
      */
     public static function boot()
     {
@@ -33,7 +33,24 @@ class Service
     }
 
     /**
-     * Beendet die Services
+     * Enables inbox clean up for tests.
+     * 
+     * Since email messages are 'appended' to the inbox,
+     * clean up may be desired when running tests.
+     */
+    public static function cleanUp(): void
+    {
+        self::deleteAllMessages();
+    }
+
+    private static function deleteAllMessages(): void
+    {
+        file_exists(File::mail_inbox())
+            && unlink(FilePath::mail_inbox());
+    }
+
+    /**
+     * Kill the service
      */
     public static function killUdpsockServer() {
         $pid = FilePath::udpsock_pid();

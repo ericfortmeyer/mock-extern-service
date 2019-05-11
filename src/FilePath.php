@@ -26,7 +26,7 @@ class FilePath
     }
 
     /**
-     * Daten die ankommen vom graylog server
+     * Data arriving from the graylog server
      *
      * @return string
      */
@@ -36,7 +36,7 @@ class FilePath
     }
 
     /**
-     * Ausgaben des Graylog Service
+     * Graylog service issues
      *
      * @return string
      */
@@ -46,7 +46,7 @@ class FilePath
     }
 
     /**
-     * Die Process ID ob der graylog Service arbeitet
+     * The Process ID if the graylog service is working
      *
      * @return string
      */
@@ -56,7 +56,7 @@ class FilePath
     }
 
     /**
-     * Das was per Mail angekommen ist
+     * Emails that were received
      *
      * @return string
      */
