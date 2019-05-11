@@ -2,16 +2,18 @@
 /**
  * Created by MockExternService.
  * Autor: Tobias Matthaiou <developer@tobimat.eu>
- * Date: 09.06.17
- * Time: 05:34
+ * ModifiedBy: Eric Fortmeyer <e.fortmeyer01@gmail.com
+ * Date: 05.10.19
  */
 use tm\MockExternService;
 
-class MockSystemTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class MockSystemTest extends TestCase
 {
     public function testIsPHPIniSetToSmtpMockServerScript()
     {
-        $this->assertContains(
+        $this->assertStringContainsString(
             "smtp-mock-server.php",
             ini_get('sendmail_path'),
             '#### Run PHPUnit with interpreter option `-d sendmail_path=tests/smtp-mock-server.php` ####');
@@ -22,7 +24,7 @@ class MockSystemTest extends PHPUnit_Framework_TestCase
         $mailto = "root@127.0.0.1";
         $msg = "Nachricht " . time();
         mail($mailto, "subject", $msg);
-        $this->assertContains($msg, MockExternService\Result::MailInbox());
+        $this->assertStringContainsString($msg, MockExternService\Result::MailInbox());
     }
 
     public function testGrayLogServer()
