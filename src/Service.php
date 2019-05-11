@@ -45,7 +45,7 @@ class Service
 
     private static function deleteAllMessages(): void
     {
-        file_exists(File::mail_inbox())
+        file_exists(FilePath::mail_inbox())
             && unlink(FilePath::mail_inbox());
     }
 
