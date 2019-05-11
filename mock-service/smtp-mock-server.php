@@ -20,6 +20,6 @@ foreach (array(__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoloa
 }
 
 $mail = file_get_contents("php://stdin");
-$inbox = MockExternService\FilePath::mail_inbox();
+$inbox = \Fortmeyer\MockExternService\FilePath::mail_inbox();
 
 file_put_contents($inbox, $mail, FILE_APPEND);
