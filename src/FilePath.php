@@ -6,11 +6,12 @@
  * Time: 08:55
  */
 
-namespace tm\MockExternService;
+namespace Fortmeyer\MockExternService;
 
 /**
  * Class FilePath
- * @package tm\MockExternService
+ * 
+ * @package Fortmeyer\MockExternService
  */
 class FilePath
 {

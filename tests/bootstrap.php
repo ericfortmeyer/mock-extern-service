@@ -6,4 +6,4 @@
  * Time: 05:34
  */
 
-\tm\MockExternService\Service::boot();
+\Fortmeyer\MockExternService\Service::boot();

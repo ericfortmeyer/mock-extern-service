@@ -28,9 +28,9 @@ foreach (array(__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoloa
     }
 }
 
-$data_received = \tm\MockExternService\FilePath::udpsock_received();
-$data_log      = \tm\MockExternService\FilePath::udpsock_log();
-$data_pid      = \tm\MockExternService\FilePath::udpsock_pid();
+$data_received = \Fortmeyer\MockExternService\FilePath::udpsock_received();
+$data_log      = \Fortmeyer\MockExternService\FilePath::udpsock_log();
+$data_pid      = \Fortmeyer\MockExternService\FilePath::udpsock_pid();
 
 function wlog($log) {
     global $data_log;

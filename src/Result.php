@@ -6,11 +6,12 @@
  * Time: 09:19
  */
 
-namespace tm\MockExternService;
+namespace Fortmeyer\MockExternService;
 
 /**
  * Class Result
- * @package tm\MockExternService
+ * 
+ * @package Fortmeyer\MockExternService
  */
 class Result
 {

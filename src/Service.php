@@ -6,12 +6,12 @@
  * Time: 09:10
  */
 
-namespace tm\MockExternService;
+namespace Fortmeyer\MockExternService;
 
 /**
  * Class Service
  *
- * @package tm\MockExternService
+ * @package Fortmeyer\MockExternService
  */
 class Service
 {
@@ -29,7 +29,7 @@ class Service
         exec("php $udpsock_server > /dev/null 2>&1 &", $output);
         sleep(1);
 
-        register_shutdown_function('tm\MockExternService\Service::killUdpsockServer');
+        register_shutdown_function('Fortmeyer\MockExternService\Service::killUdpsockServer');
     }
 
     /**

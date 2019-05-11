@@ -5,7 +5,7 @@
  * ModifiedBy: Eric Fortmeyer <e.fortmeyer01@gmail.com
  * Date: 05.10.19
  */
-use tm\MockExternService;
+use Fortmeyer\MockExternService;
 
 use PHPUnit\Framework\TestCase;
 
