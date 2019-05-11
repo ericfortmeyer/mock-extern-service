@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-namespace Fortmeyer;
+namespace Fortmeyer\MockExternService;
 /**
  * Created by MockExternService.
  * Autor: Tobias Matthaiou <developer@tobimat.eu>
@@ -20,6 +20,6 @@ foreach (array(__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoloa
 }
 
 $mail = file_get_contents("php://stdin");
-$inbox = MockExternService\FilePath::mail_inbox();
+$inbox = FilePath::mail_inbox();
 
 file_put_contents($inbox, $mail, FILE_APPEND);
