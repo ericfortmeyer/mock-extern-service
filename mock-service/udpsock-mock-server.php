@@ -21,7 +21,12 @@ set_time_limit (0);
 ob_implicit_flush ();
 
 // Find autoloader
-foreach (array(__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php') as $file) {
+foreach (
+    [
+        // __DIR__ . '/../../../autoload.php',
+        __DIR__ . '/../vendor/autoload.php'
+    ]
+    as $file) {
     if (file_exists($file)) {
         require $file;
         break;
