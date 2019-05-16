@@ -25,10 +25,6 @@ foreach (
 }
 
 $mail = file_get_contents("php://stdin");
-<<<<<<< HEAD
-$inbox = \Fortmeyer\MockExternService\FilePath::mail_inbox();
-=======
 $inbox = FilePath::mail_inbox();
->>>>>>> a7b6b017bf88eb17162efb401f74064c66eb910b
 
 file_put_contents($inbox, $mail, FILE_APPEND);
