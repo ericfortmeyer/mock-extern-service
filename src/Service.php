@@ -20,8 +20,8 @@ class Service
      */
     public static function boot()
     {
-        if (strpos(ini_get('sendmail_path'), 'mock-service/smtp-mock-server.php') === false) {
-            trigger_error('Run PHP with interpreter option `-d sendmail_path=mock-service/smtp-mock-server.php` ####');
+        if (strpos(ini_get('sendmail_path'), 'smtp-mock-server.php') === false) {
+            trigger_error('Run PHP with interpreter option `-d sendmail_path=smtp-mock-server.php` ####');
             die(255);
         }
 
